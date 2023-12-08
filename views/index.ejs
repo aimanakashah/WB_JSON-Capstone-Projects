@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <title>Currency Exchange Rate</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>CURRENCY EXCHANGE</h1>
+
+      <form action="/exchange" id="form" class="form" method="GET">
+        <select name="firstCurrency" class="form-select">
+          <option value="" data-display="Select">Choose Currency</option>
+          <option value="USD">US Dollar</option>
+          <option value="AED">UAE Dirham</option>
+          <option value="JPY">Japanese Yen</option>
+          <option value="GBP">Great British Pound</option>
+          <option value="THB">Thai Baht</option>
+          <option value="SGD">Singapore Dollar</option>
+          <option value="MYR">Malaysian Ringgit</option>
+          <option value="KRW">South Korean Won</option>
+        </select>
+        <input
+          name="numberInserted"
+          type="number"
+          pattern="[0-9]*"
+          placeholder="Insert number"
+        />
+        <select name="secondCurrency" class="form-select">
+          <option value="">Choose Currency</option>
+          <option value="USD">US Dollar</option>
+          <option value="AED">UAE Dirham</option>
+          <option value="JPY">Japanese Yen</option>
+          <option value="GBP">Great British Pound</option>
+          <option value="THB">Thai Baht</option>
+          <option value="SGD">Singapore Dollar</option>
+          <option value="MYR">Malaysian Ringgit</option>
+          <option value="KRW">South Korean Won</option>
+        </select>
+        <button type="submit" class="form-submit">Exchange</button>
+      </form>
+
+      <section id="cards" class="cards">
+        <article class="card-item">
+          <h2 class="card-activity">
+            <!-- Show Activity -->
+            <%= insertedNumber %><%= first %> = <%=exchange %> <%= second %>
+          </h2>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

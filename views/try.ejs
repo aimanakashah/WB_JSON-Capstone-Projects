@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= exchange.rates.MYR %></h1>
+  </body>
+</html>
+
+
+<% if(locals.error ) { %>
+  <section id="cards" class="cards">
+    <article class="card-item">
+      <div id="tag-error" class="tag-error">
+        <!-- Show any errors that were sent from the backend -->
+        <span><%= error %></span>
+      </div>
+    </article>
+  </section>
+
+  <% } else { %>
+  <section id="cards" class="cards">
+    <article class="card-item">
+      <h2 class="card-activity">
+        <!-- Show Activity -->
+        <%= exchange.rates.USD %>
+      </h2>
+      <div class="card-info">
+        <span class="card-type">
+          <!-- Show Activity type -->
+        </span>
+        <span class="card-participants">
+          <!-- participants: Show participant number -->
+          <span class="card-number"></span>
+        </span>
+      </div>
+    </article>
+  </section>
+  <% } %>
+</div>
+</body>
+</html>
